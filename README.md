@@ -11,18 +11,6 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-blue">
 </p>
 
-
-## Build image
-
-Create a Dockerfile with
-```
- FROM fernandompimenta/mapserver:v7.4.3
-```
-and run the following command
-```
-docker build -f Dockerfile .
-```
-
 ## Start container
 ```
 docker run --name [container name] --privileged=true -d -p [exposed port]:[internal port] -v [host-path]:[container-path] fernandompimenta/mapserver:v7.4.3
