@@ -3,6 +3,9 @@
 echo "
 ServerName mapserver" >> /etc/httpd/conf/httpd.conf
 
+echo '
+Header set Access-Control-Allow-Origin "*"' >> /etc/httpd/conf/httpd.conf
+
 echo "
 <Directory /tmp/>
     AllowOverride all
