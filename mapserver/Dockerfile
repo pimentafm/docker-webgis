@@ -9,6 +9,7 @@ RUN dnf -y update && dnf -y install httpd mod_fcgid mapserver && dnf clean all
 RUN ["cp", "/usr/bin/mapserv", "/var/www/cgi-bin/mapserv.fcgi"]
 
 ADD mapserver/httpd-config.sh /var/www/httpd-conf.sh
+ADD mapserver/index.html /var/www/html/index.html
 
 RUN chmod +x httpd-conf.sh && ./httpd-conf.sh
 
